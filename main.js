@@ -15,7 +15,7 @@ ctx.globalAlpha = 1.0;
 ctx.textAlign = "center";
 ctx.font = "30px monospace";
 ctx.fillStyle = "yellow";
-ctx.fillText('Maurer Rose', 0, -cy + 40);
+ctx.fillText('Maurer Rose', 0, -cy + 30);
 
 ctx.textAlign = "left";
 ctx.fillStyle = "white";
@@ -23,7 +23,8 @@ ctx.font = "italic normal 15px monospace";
 ctx.fillText("Made with 💖 by Ashik Paul", -cx, cy - 15);
 
 if (window.innerWidth > 900) {ctx.scale(2, 2);}
-else { ctx.scale(1.25, 1.25);}
+// else if(window.innerWidth > 400){ctx.scale(1.25, 1.25);}
+else { ctx.scale(1, 1);}
 
 const draw = () => {
   for (let i = 0; i < 361; i++) {
