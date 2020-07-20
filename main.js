@@ -64,7 +64,7 @@ nOutput.innerHTML = nSlider.value;
 nSlider.oninput = function () {
   nOutput.innerHTML = this.value;
   n = parseInt(this.value);
-  ctx.clearRect(-w/2, -h/2 + 95, w*2, h-195);
+  ctx.clearRect(-w/2, -h/2 + 90, w*2, h-190);
   draw();
 }
 
@@ -74,6 +74,6 @@ dOutput.innerHTML = dSlider.value;
 dSlider.oninput = function () {
   dOutput.innerHTML = this.value;
   d = parseInt(this.value);
-  ctx.clearRect(-w/2, -h/2 + 95, w*2, h-195);
+  ctx.clearRect(-w/2, -h/2 + 90, w*2, h-190);
   draw();
 }
