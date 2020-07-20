@@ -1,6 +1,6 @@
 const c = document.getElementById("myCanvas");
 c.width = window.innerWidth;
-c.height = window.innerHeight - 180;
+c.height = window.innerHeight - 170;
 let ctx = c.getContext("2d");
 let cx = c.width / 2, cy = c.height / 2;
 let n = 6, d = 71;
@@ -20,10 +20,10 @@ ctx.fillText('Maurer Rose', 0, -cy + 40);
 ctx.textAlign = "left";
 ctx.fillStyle = "white";
 ctx.font = "italic normal 15px monospace";
-ctx.fillText("Made with 💖 by Ashik Paul", -cx, cy - 20);
+ctx.fillText("Made with 💖 by Ashik Paul", -cx, cy - 15);
 
-if (window.innerWidth > 900) ctx.scale(2, 2);
-else ctx.scale(1.25, 1.25);
+if (window.innerWidth > 900) {ctx.scale(2, 2);}
+else { ctx.scale(1.25, 1.25);}
 
 const draw = () => {
   for (let i = 0; i < 361; i++) {
@@ -35,7 +35,7 @@ const draw = () => {
     ctx.beginPath();
     ctx.moveTo(last.x, last.y);
     ctx.lineTo(x, y);
-    ctx.strokeStyle = "white";
+    ctx.strokeStyle = 'hsl(' + Math.random() * 360 + ',100%,50%)';
     ctx.stroke();
     last = { x, y };
   }
@@ -50,7 +50,7 @@ const draw = () => {
     ctx.beginPath();
     ctx.moveTo(last.x, last.y);
     ctx.lineTo(x, y);
-    ctx.strokeStyle = "darkgreen";
+    ctx.strokeStyle = 'hsl(' + r + ',100%,50%)';
     ctx.stroke();
     last = { x, y };
   }
